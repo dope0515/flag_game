@@ -10,19 +10,25 @@
   font-family: nanum-round;
 }
 
+.main_section {
+  width: 100%;
+  height: 100%;
+}
+
 .content_container {
   width: 100%;
   max-width: 1920px;
-  margin: 0 auto;
-  height: 100vh;
+  height: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   background-image: url(../img/background_02.jpg);
   background-size: cover;
+  background-repeat: no-repeat;
   background-position: center;
-  position: relative;
+  position: fixed;
+  overflow: hidden;
 }
 
 .button_wrap {
