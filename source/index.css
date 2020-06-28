@@ -1,0 +1,179 @@
+@import url("reset.css");
+
+@font-face {
+  font-family: nanum-round;
+  src: url(../font/NanumSquareRoundEB.ttf);
+}
+
+* {
+  box-sizing: border-box;
+  font-family: nanum-round;
+}
+
+.content_container {
+  width: 100%;
+  max-width: 1920px;
+  margin: 0 auto;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-image: url(../img/background_02.jpg);
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.button_wrap {
+  display: flex;
+  width: 120px;
+  flex-wrap: wrap;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 90%;
+  left: 50%;
+}
+
+.start_button {
+  width: 100px;
+  height: 50px;
+  text-align: center;
+  background-color: white;
+  border: 1px solid rgba(0,0,0,0.8);
+  border-radius: 100%;
+  position: absolute;
+  bottom: 10%;
+  left: 20%;
+}
+
+.start_button:hover {
+  background-color: rgba(250,250,250,0.9);
+}
+
+.stop_button {
+  width: 100px;
+  height: 50px;
+  text-align: center;
+  background-color: white;
+  border: 1px solid rgba(0,0,0,0.8);
+  border-radius: 100%;
+  position: absolute;
+  bottom: 10%;
+  right: 20%;
+}
+
+.stop_button:hover {
+  background-color: rgba(250,250,250,0.9);
+}
+
+.mission_button {
+  width: 50px;
+  height: 50px;
+  border: 1px solid black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-size: cover;
+  cursor: pointer;
+}
+
+.mission_button:nth-child(odd) {
+  margin-right: 20px;
+}
+
+.mission_button:nth-child(n + 3) {
+  margin-top: 20px;
+}
+
+.blue_up {
+  background-image: url(../img/blue_up.png);
+}
+
+.white_up {
+  background-image: url(../img/white_up.png);
+}
+
+.blue_down {
+  background-image: url(../img/blue_down.png);
+}
+
+.white_down {
+  background-image: url(../img/white_down.png);
+}
+
+.copy_wrap {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  transform: translateY(-50%);
+  position: absolute;
+  top: 15%;
+}
+
+.copy_wrap div {
+  margin: 0 2rem;
+  font-size: 1.5rem;
+  line-height: 4rem;
+}
+
+.copy_wrap div:nth-child(2) {
+  font-size: 3rem;
+}
+
+.Penguin_wrap {
+  position: absolute;
+  bottom: 10%;
+}
+
+#penguin {
+  width: 100%;
+}
+
+.heart {
+  width: 100px;
+  height: 100px;
+}
+
+@media (max-width: 769px) {
+  
+  .copy_wrap div:nth-child(2) {
+    font-size: 2rem;
+  }
+
+  .start_button {
+    left: 10%;
+  }
+
+  .stop_button {
+    right: 10%;
+  }
+}
+
+@media (max-width:620px) {
+  #mission {
+    width: 100%;
+    margin: 0;
+    text-align: center;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    bottom: -300%;
+    left: 50%;
+    
+  }
+}
+
+@media (max-width:500px) {
+  .start_button {
+    width: 80px;
+    left: 5%;
+  }
+  .stop_button {
+    width: 80px;
+    right: 5%;
+  }
+  .heart {
+    width: 60px;
+    height: 60px;
+  }
+}

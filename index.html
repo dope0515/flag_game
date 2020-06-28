@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+
+<html lang="ko">
+  <head>
+    <title>신나는 청기백기 게임!</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" type="text/css" href="source/index.css" />
+    <link rel="stylesheet" type="text/css" href="source/media.css" />
+    <link rel="icon" href="img/favicon.png" sizes="16x16" />
+    <script type="text/javascript" src="source/javascript.js"></script>
+  </head>
+
+  <body>
+    <section class="main_section">
+      <div class="content_container">
+        <div class="copy_wrap">
+          <div id="round">라운드 1</div>
+          <div id="mission">2초후에 시작합니다</div>
+          <div id="score">점수 : 0</div>
+        </div>
+
+        <div class="Penguin_wrap">
+          <img src="img/basic.svg" id="penguin" />
+        </div>
+
+        <ul class="button_wrap">
+          <li class="mission_button blue_up" onclick="clickButton(1)"></li>
+          <li class="mission_button white_up" onclick="clickButton(2)"></li>
+          <li class="mission_button blue_down" onclick="clickButton(3)"></li>
+          <li class="mission_button white_down" onclick="clickButton(4)"></li>
+        </ul>
+        
+        <button class="start_button" onclick="clickStart()">시작</button>
+        <button class="stop_button" onclick="clickStop()">일시정지</button>
+        <div style="position: absolute; top:2%; right: 0;">
+          <img src="img/heart.png" alt="heart_img" class="heart">
+          <img src="img/heart.png" alt="heart_img" class="heart">
+          <img src="img/heart.png" alt="heart_img" class="heart">
+        </div>
+      </div>
+    </section>
+  </body>
+</html>
