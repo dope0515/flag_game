@@ -1,1 +1,228 @@
-1
+/* 1024 - Tablet Landscape */
+@media only screen and (max-width:1024px) {
+    .rule {
+        font-size: 1rem;
+    }
+
+    #round {
+        font-size: 4rem;
+        top: 6rem;
+    }
+
+    #mission {
+        width: 480px;
+        height: 80px;
+        font-size: 2rem;
+        text-align: center;
+    }
+
+    #ready {font-size: 7rem;}
+
+    .button_wrap {
+        width: 100%;        
+    }
+
+    .mission_button {
+        position: absolute;
+        width: 100px;
+        height: 100px;
+        background-color: yellow;
+    }
+
+    .mission_button:hover {
+        background-color: yellow; 
+        opacity: 1;
+        transition: none;
+    }
+
+    .mission_button:active {
+        background-color: rgba(255,0,0,0.9);  
+        transition: all 0.2s;
+    }
+
+    .blue_up {
+        bottom: 9rem;
+        left:  1rem;
+    }
+
+    .blue_down {
+        bottom: 2rem;
+        left: 1rem;
+    }
+
+    .white_up {
+        bottom: 9rem;
+        right: 1rem;
+    }
+
+    .white_down {
+        bottom: 2rem;
+        right: 1rem;
+    }
+}
+
+
+/* 768 - Tablet Portrait */
+@media only screen and (max-width:768px) {
+    #round {
+        font-size: 3rem;
+        top: 2rem;
+        left: 12rem;
+    }
+
+    #score {
+        font-size: 3rem;
+        padding-bottom: 0.5rem;
+        width: 160px;
+        height: 80px;
+    }
+
+    #ready {
+        top: 25rem;
+        font-size: 5rem;
+    }
+
+    .character {
+        width: 90%;
+    }
+    
+    .character img {
+        width: 100%;
+    }
+
+    #mission {
+        bottom: 15rem;
+        max-width: 480px;
+        width: 93%;
+        text-align: center;
+    }
+
+    .mission_button {     
+        width: 70px;
+        height: 70px;     
+    }
+
+    .timebar {
+        bottom: 25%;
+    }
+
+    .blue_up, .white_up {
+        bottom: 7rem;        
+    }
+
+    .heart_container {
+        right: 1rem;
+    }
+
+    .heart {
+        margin-right: -20px;
+    }
+}
+
+@media only screen and (max-width:768px) and (max-height:480px) {
+    #ready {
+        top: 14rem;        
+    }
+
+    #mission {
+        bottom: 14rem;
+    }
+
+    .rule {
+        background-color: rgba(255,255,255,1);
+    }
+
+    #score {     
+        top: 4rem;
+        right: 1rem;
+    }
+}
+
+
+/* 414 - Phone Landscape */
+@media only screen and (max-width:414px) {
+    .reset {
+        top: 1rem;
+        left: 1rem;
+    }
+    
+    #ready {
+        top: 23rem;
+        font-size: 4rem;
+        text-align: center;
+    }
+
+    #round {        
+        font-size: 2rem;
+        top: 6rem;
+        left: 5rem;
+    }
+
+    .rule {
+        background-color: rgba(255,255,255,1);
+    }
+
+    #score {
+        top: 4rem;
+    }
+
+    #mission {
+        font-size: 1.5rem;
+    }
+
+    .timebar {
+        max-width: 200px;
+        width: 47%;
+        bottom: 11rem;
+    }
+
+    .start {
+        left: 35%;
+    }
+
+    .stop {
+        right: 35%;
+    }
+}
+
+
+/* 360 - Phone Portrait */
+@media only screen and (max-width:360px) {
+    .timebar {
+        max-width: 150px;
+        width: 47%;
+    }
+}
+
+
+/* 320 - min */
+@media only screen and (max-width:320px) {
+    .start {
+        left: 33%;
+    }
+
+    .stop {
+        right: 33%;
+    }
+
+    #ready {
+        top: 17rem;
+    }
+
+    #mission {
+        font-size: 1rem;
+        height: 50px;
+    }
+
+    #round {        
+        font-size: 1rem;
+        top: 5rem;
+        left: 3rem;
+    }
+
+    .timebar {
+        max-width: 130px;
+        width: 47%;
+        bottom: 11rem;
+    }
+}

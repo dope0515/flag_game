@@ -1,34 +1,175 @@
 @import url("reset.css");
 
 @font-face {
-  font-family: nanum-round;
-  src: url(../font/NanumSquareRoundEB.ttf);
+  font-family: 'nanum-round';
+  src: url(NanumSquareRoundEB.ttf);
 }
 
-* {
-  box-sizing: border-box;
-  font-family: nanum-round;
+@font-face { 
+  font-family: 'NeoDunggeunmo'; 
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.3/NeoDunggeunmo.woff') format('woff'); 
+  font-weight: normal; 
+  font-style: normal; 
 }
 
-.main_section {
-  width: 100%;
-  height: 100%;
+* {  
+  font-family: 'nanum-round';
 }
 
 .content_container {
   width: 100%;
-  max-width: 1920px;
+  max-width: 1366px;
   height: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  background-image: url(../img/background_02.jpg);
+  transform: translate(-50%,-50%);  
+  background-image: url(../img/background_01.jpg);
   background-size: cover;
-  background-repeat: no-repeat;
   background-position: center;
-  position: fixed;
+  top: 50%;
+  left: 50%;
+  position: absolute;
   overflow: hidden;
+}
+
+#ready {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  font-size: 10rem;
+  color: red;
+  width: 100%;  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.rule {
+  background-color: rgba(255,255,255,0.5);
+  border: 1px solid black;
+  border-radius: 10px;
+  width: fit-content;
+  height: fit-content;
+  font-size: 2rem;
+  color: black;
+  padding: 2rem;
+}
+
+#score {
+  width: 180px;
+  height: 100px;
+  font-size: 4rem;
+  border:  1px solid black;
+  background-color: rgba(255,255,255,0.5);
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  padding-bottom: 4px;
+  position: absolute;
+  top: 5rem;
+  right: 2rem;
+}
+
+#score::before {
+  content: 'Score';  
+  position: absolute;  
+  font-size: 1rem;
+  left: 4px;
+  top: 4px;
+}
+
+#round {
+  position: absolute;
+  top: 5rem;
+  left: 50%;  
+  transform: translate(-50%);
+  font-size: 6rem;
+  display: none;
+}
+
+.character {
+  width: 50%;
+  height: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.timebar {  
+  width: 300px;
+  height: 20px;
+  
+  position: absolute;
+  left: 50%;
+  bottom: 32%;
+  transform: translate(-50%);      
+}
+
+.progress {
+  width: 0;  
+  height: 100%;
+  background-color: red;    
+}
+
+#mission {
+  width: 680px;
+  height: 90px;
+  font-family: NeoDunggeunmo;
+  font-size: 3rem;
+  border:  1px solid black;
+  background-color: rgba(255,255,255,0.5);
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  left: 50%;
+  bottom: 20%;
+  transform: translate(-50%);
+}
+
+.game_button {
+  width: 50px;
+  height: 50px;
+  color: white;
+  background-color: #4CAF50;
+  border-radius: 10px; 
+  box-shadow: 0 9px #999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: NeoDunggeunmo;
+}
+
+.game_button:hover {background-color: #3e8e41}
+
+.game_button:active {
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+.reset {
+  position: absolute;
+  top: 2rem;
+  left: 2rem;
+  background-color: #718F38;
+  border-radius: 50%;
+}
+
+.start {
+  position: absolute;
+  left: 38%;
+  bottom: 9%;
+}
+
+.start:hover {
+  cursor: pointer;
 }
 
 .button_wrap {
@@ -36,150 +177,68 @@
   width: 120px;
   flex-wrap: wrap;
   position: absolute;
-  transform: translate(-50%, -50%);
-  top: 90%;
   left: 50%;
-}
-
-.start_button {
-  width: 100px;
-  height: 50px;
-  text-align: center;
-  background-color: white;
-  border: 1px solid rgba(0,0,0,0.8);
-  border-radius: 100%;
-  position: absolute;
-  bottom: 10%;
-  left: 20%;
-}
-
-.start_button:hover {
-  background-color: rgba(250,250,250,0.9);
-}
-
-.stop_button {
-  width: 100px;
-  height: 50px;
-  text-align: center;
-  background-color: white;
-  border: 1px solid rgba(0,0,0,0.8);
-  border-radius: 100%;
-  position: absolute;
-  bottom: 10%;
-  right: 20%;
-}
-
-.stop_button:hover {
-  background-color: rgba(250,250,250,0.9);
+  bottom: 5%;
+  transform: translate(-50%);
 }
 
 .mission_button {
   width: 50px;
   height: 50px;
-  border: 1px solid black;
+  border: 1px solid rgba(0,0,0,0.6);
+  border-radius: 10px;
   display: flex;
   justify-content: center;
   align-items: center;
   background-size: cover;
   cursor: pointer;
+  margin: 0 5px 5px 0;
 }
 
-.mission_button:nth-child(odd) {
-  margin-right: 20px;
-}
-
-.mission_button:nth-child(n + 3) {
-  margin-top: 20px;
+.mission_button:hover {
+  background-color: yellow;
+  opacity: 0.5;
+  transition: all 0.2s;
 }
 
 .blue_up {
-  background-image: url(../img/blue_up.png);
+  background-image: url(../img/button_blue_up.png);
 }
 
 .white_up {
-  background-image: url(../img/white_up.png);
+  background-image: url(../img/button_white_up.png);
 }
 
 .blue_down {
-  background-image: url(../img/blue_down.png);
+  background-image: url(../img/button_blue_down.png);
 }
 
 .white_down {
-  background-image: url(../img/white_down.png);
+  background-image: url(../img/button_white_down.png);
 }
 
-.copy_wrap {
-  display: flex;
-  justify-content: space-between;
-  width: 100%;
-  transform: translateY(-50%);
+.stop {
   position: absolute;
-  top: 15%;
+  right: 39%;
+  bottom: 9%;
+  background-color: #B04C78;
 }
 
-.copy_wrap div {
-  margin: 0 2rem;
-  font-size: 1.5rem;
-  line-height: 4rem;
+.stop:hover {
+ cursor: pointer;
 }
 
-.copy_wrap div:nth-child(2) {
-  font-size: 3rem;
-}
-
-.Penguin_wrap {
+.heart_container {
   position: absolute;
-  bottom: 10%;
-}
-
-#penguin {
-  width: 100%;
+  top:2%;
+  right: 2rem;
 }
 
 .heart {
-  width: 100px;
-  height: 100px;
+  width: 50px;
+  height: 50px;
+  margin-right: -10px;
 }
-
-@media (max-width: 769px) {
-  
-  .copy_wrap div:nth-child(2) {
-    font-size: 2rem;
-  }
-
-  .start_button {
-    left: 10%;
-  }
-
-  .stop_button {
-    right: 10%;
-  }
-}
-
-@media (max-width:620px) {
-  #mission {
-    width: 100%;
-    margin: 0;
-    text-align: center;
-    position: absolute;
-    transform: translate(-50%,-50%);
-    bottom: -200%;
-    left: 50%;
-    
-  }
-}
-
-@media (max-width:500px) {
-  .start_button {
-    width: 80px;
-    left: 5%;
-  }
-  .stop_button {
-    width: 80px;
-    right: 5%;
-  }
-  .heart {
-    width: 60px;
-    height: 60px;
-  }
+.heart:last-child {
+  margin-right: 0px;
 }

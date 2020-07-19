@@ -14,27 +14,48 @@
 
   <body>
     <section class="main_section">
-      <div class="content_container">
-        <div class="copy_wrap">
-          <div id="round">라운드 1</div>
-          <div id="mission">2초후에 시작합니다</div>
-          <div id="score">점수 : 0</div>
+      <div class="content_container">        
+      <script>
+        var bg_img = Math.floor(Math.random()*3)+1;
+        document.getElementsByClassName('content_container')[0].style="background-image: url(img/background_0" + bg_img + ".jpg);"
+      </script>
+        
+        <div class="game_button reset" onclick="clickReset()">리셋</div>
+
+        <div id="ready">
+          <div class="rule">
+            1. 문제를 틀릴 시 하트가 한개씩 사라집니다. <br><br>
+            2. 하트가 모두 사라지고, 점수가 마이너스가 되면 게임이 종료됩니다. <br><br>
+            3. 게임을 시작하면 사운드가 재생됩니다. 원하지 않으면 미리 제어바랍니다.         
+          </div>
         </div>
 
-        <div class="Penguin_wrap">
-          <img src="img/basic.svg" id="penguin" />
+        <div id="score">0</div>
+
+        <div id="round">1 Round</div>
+
+        <div class="character">
+          <img src="img/start.png">
         </div>
 
-        <ul class="button_wrap">
+        <div class="timebar">
+          <div class="progress"></div>
+        </div>
+
+        <div id="mission">시작버튼을 눌러주세요!</div>
+
+        <div class="game_button start">시작</div>
+
+        <ul class="button_wrap">          
           <li class="mission_button blue_up" onclick="clickButton(1)"></li>
           <li class="mission_button white_up" onclick="clickButton(2)"></li>
           <li class="mission_button blue_down" onclick="clickButton(3)"></li>
           <li class="mission_button white_down" onclick="clickButton(4)"></li>
         </ul>
-        
-        <button class="start_button" onclick="clickStart()">시작</button>
-        <button class="stop_button" onclick="clickStop()">일시정지</button>
-        <div style="position: absolute; top:2%; right: 0;">
+        <div class="game_button stop">중지</div>
+        <div class="heart_container">
+          <img src="img/heart.png" alt="heart_img" class="heart">
+          <img src="img/heart.png" alt="heart_img" class="heart">
           <img src="img/heart.png" alt="heart_img" class="heart">
           <img src="img/heart.png" alt="heart_img" class="heart">
           <img src="img/heart.png" alt="heart_img" class="heart">
