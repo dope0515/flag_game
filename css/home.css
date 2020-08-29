@@ -1,0 +1,557 @@
+/*navigation*/
+.navigation {
+    overflow: hidden;
+}
+
+.header {
+    width: calc(100% - 100px);
+    display: flex;
+    align-items: center;
+    margin: 50px 50px 0;
+    position: fixed;
+    z-index: 1000;
+}
+
+.header_logo {
+    width: 200px;
+}
+
+#logo_img {
+    width: 50px;
+    transition: all 0.3s;
+}
+
+#logo_img:hover {
+    cursor: pointer;
+    width: 56px;
+}
+
+.header_center {
+    width: 100%;
+    height: auto;
+    margin-right: 50px;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+#header_txt {
+    font-family: 'Rosellinda';
+    font-size: 24px;
+    line-height: 1.4;
+    color: #222;
+    animation-name: txtmove;
+    animation-duration: 30s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+.header_center p:hover {
+    cursor: grab;
+    animation-play-state: paused;
+}
+
+/*menu_btn*/
+.menu_btn {
+    min-width: 40px;
+    height: 40px;
+    box-sizing: border-box;
+    border: 2px solid #444;
+    position: relative;
+    z-index: 1000;
+    transition: background-color 1s;
+}
+
+#menu_line_top {
+    width: 40%;
+    height: 2px;
+    background-color: #444;
+    display: block;
+    position: absolute;
+    top: 30%;
+    left: 30%;
+    transition: all 0.3s;
+}
+
+#menu_line_bottom {
+    width: 40%;
+    height: 2px;
+    background-color: #444;
+    display: block;
+    position: absolute;
+    bottom: 30%;
+    left: 30%;
+    transition: all 0.3s;
+}
+
+@keyframes txtmove {
+    0% {
+        transform: translateX(100%);
+    }
+
+    100% {
+        transform: translateX(-200%);
+    }
+}
+
+/*menu*/
+.menu {
+    width: 100%;
+    height: 100vh;
+    background-color: #fff;
+    opacity: 0;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    z-index: 0;
+    transition: all 0.3s;
+}
+
+.menu h2:hover {
+    cursor: pointer;
+}
+
+/*slide control*/
+
+.slide_control {
+    position: fixed;
+    right: 50px;
+    bottom: 50px;
+    z-index: 1000;
+}
+
+.slide_num {
+    position: absolute;
+    right: 50px;
+    bottom: -2px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.slide_current_index {
+    display: flex;
+    font-size: 12px;
+}
+
+.slide_border {
+    width: 1px;
+    height: 40px;
+    margin: 4px 0;
+    background-color: #444;
+}
+
+.slide_index p {
+    font-size: 12px;
+}
+
+.slide_btn {
+    display: flex;
+    flex-direction: column;
+}
+
+
+.slide_up {
+    width: 40px;
+    height: 40px;
+    border: 2px solid #444;
+    position: relative;
+    overflow: hidden;
+    transition: background-color 1s;
+}
+
+.slide_up_arrow {
+    width: 12px;
+    height: 12px;
+    display: block;
+    position: absolute;
+    transform: rotate(45deg);
+    top: 40%;
+    left: 34%;
+    border-left: 2px solid #444;
+    border-top: 2px solid #444;
+}
+
+.slide_down {
+    width: 40px;
+    height: 40px;
+    border: 2px solid #444;
+    border-top: none;
+    position: relative;
+    overflow: hidden;
+    transition: background-color 1s;
+}
+
+.slide_down_arrow {
+    width: 12px;
+    height: 12px;
+    display: block;
+    position: absolute;
+    transform: rotate(45deg);
+    bottom: 40%;
+    left: 34%;
+    border-right: 2px solid #444;
+    border-bottom: 2px solid #444;
+}
+
+.slide_up:hover .slide_up_arrow {
+    animation-name: slide_btn_up;
+    animation-iteration-count: 1;
+    animation-duration: 0.3s;
+    animation-timing-function: linear;
+}
+
+.slide_down:hover .slide_down_arrow {
+    animation-name: slide_btn_down;
+    animation-iteration-count: 1;
+    animation-duration: 0.3s;
+    animation-timing-function: linear;
+}
+
+@keyframes slide_btn_up {
+    0% {
+        top:100%;
+    }
+    100% {
+        top:40%;
+    }
+}
+
+@keyframes slide_btn_down {
+    0% {
+        bottom:100%;
+    }
+    100% {
+        bottom:40%;
+    }
+}
+
+/*address*/
+.address {
+    position: fixed;
+    bottom: 50px;
+    left: 50px;
+    z-index: 1200;
+}
+
+.address p {
+    font-size: 12px;
+    margin-bottom: 4px;
+}
+
+.address > p:first-child {
+    border-bottom: 1px solid #222;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+}
+
+.address p:last-child {
+    margin-bottom: 0;
+}
+
+.sns {
+    display: flex;
+    padding: 4px 0;
+}
+
+.sns a {
+    font-weight: 900;
+}
+
+.sns p:nth-child(n) {
+    border-right: 1px solid #222;
+    line-height: 0.8;
+}
+
+.sns p:last-child {
+    border-right:none;
+}
+
+.sns :nth-child(n) {
+    margin-right: 10px;
+}
+
+/*main*/
+#slide_body {
+    width: 100%;
+    height: 100%;
+}
+
+.hero_main {
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    display: flex;
+    position: absolute;
+    top: 0%;
+    z-index: 1;
+    transition: all 1s;
+}
+
+.hero_main:nth-child(n+2) {
+    top:100%;
+    opacity: 0;
+    background-color: #fff;
+}
+
+.hero_main:first-child {
+    background-image: url(../img/genesis.png);
+}
+
+.hero_main:nth-child(2) {
+    background-image: url(../img/samsung.png);
+}
+
+.hero_main:nth-child(3) {
+    background-image: url(../img/huge.png);
+}
+
+.hero_main:nth-child(4) {
+    color: #fff;
+    background-image: url(../img/netflix.png);
+}
+
+.hero_main:nth-child(5) {
+    background-image: url(../img/flag_game.png);
+}
+
+.hero_content {
+    width: 320px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 50px; 
+    position: relative;
+}
+
+.hero_detail {
+    padding-bottom: 30%;
+}
+
+.hero_detail h2 {
+    font-size: 56px;
+    line-height: 1.2;
+    white-space: nowrap;
+}
+
+.hero_detail h3 {
+    font-size: 16px;
+    font-family: 'Roboto-Regular';
+    margin-bottom: 16px;
+}
+
+.hero_detail p {
+    font-size: 12px;
+    line-height: 1.4;
+}
+
+.hero_detail :nth-child(n+3) {
+    margin-bottom: 6px;
+}
+
+.link_btn {
+    margin-top: 12px;
+    padding: 12px 20px;
+    font-size: 14px;
+    text-align: center;
+    border: 1px solid #222;
+}
+
+.mockup_img {
+    width: 100%;
+}
+
+.macbook_container {
+    width: 700px;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    top: 56%;
+    left: 64%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+
+.genesis_video {
+    width: 510px;
+    height: 320px;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    top: 48%;
+    left: 50%;
+    object-fit: fill;
+}
+
+.monitor_container {
+    width: 700px;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    top: 54.6%;
+    left: 64%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+
+.samsung_video {
+    width: 665px;
+    height: 376px;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    top: 45.9%;
+    left: 50%;
+    object-fit: fill;
+}
+
+.huge_img {
+    width: 50%;
+    display: none;
+    position: absolute;
+    top: 46%;
+    left: 61%;
+    transform: translate(-50%, -50%);
+}
+
+.tv_container {
+    width: 746px;
+    height: 235px;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    top: 13.6%;
+}
+
+
+.netflix_video {
+    width: 732px;
+    height: 413px;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 145.2%;
+    left: 50.4%;
+    object-fit: fill;
+}
+
+/*media query*/
+@media screen and (max-width:1440px) {
+
+    /*hero main*/
+    .hero_main:first-child {
+        background-image: url(../img/bg_gray.png);
+    }
+    
+    .hero_main:nth-child(2) {
+        background-image: url(../img/bg_blue.png);
+    }
+    
+    .hero_main:nth-child(3) {
+        background-image: url(../img/bg_pink.png);
+    }
+    
+    .hero_main:nth-child(4) {
+        color: #fff;
+        background-image: url(../img/m-netflix3.png);
+        background-position: center 30%;
+    }
+    
+    .hero_main:nth-child(5) {
+        background-image: url(../img/bg_purple.png);
+    }
+
+    .macbook_container {
+        top: 46%;
+    }
+
+    .huge_img {
+        display: block;
+    }
+
+    .tv_container {
+        display: none;
+    }
+
+    .monitor_container {
+        top: 48%;
+    }
+}
+
+@media screen and (max-width:1000px) {
+    .hero_content {
+        width: 100%;
+        margin-left: 0;
+        justify-content: flex-end;
+        align-items: center;
+    }
+
+    .hero_detail {
+        padding-bottom: 166px;
+        text-align: center;
+    }
+
+    .macbook_container {
+        width: 600px;
+        left: 50%;
+        top: 39%;
+    }
+
+    .genesis_video {
+        width: 458px;
+        height: 282px;
+        left: 50%;
+        top: 47%;
+    }
+
+    .monitor_container {
+        width: 600px;
+        top: 38%;
+        left: 50%;
+    }
+    
+    .samsung_video {
+        width: 568px;
+        height: 320px;
+    }
+
+    .huge_img {
+        width: auto;
+        top: 38%;
+        left: 50%;
+    }
+
+    .tv_container {
+        display: none;
+    }
+
+}
+
+@media screen and (max-width:600px) {
+    .macbook_container {
+        width: 400px;
+        left: 50%;
+        top: 44%;
+    }
+
+    .genesis_video {
+        width: 300px;
+        height: 190px;
+        left: 50%;
+        top: 47%;
+    }
+
+    .monitor_container {
+        width: 400px;
+        top: 45%;
+    }
+
+    .samsung_video {
+        width: 379px;
+        height: 214px;
+    }
+
+    .huge_img {
+        width: 400px;
+    }
+}

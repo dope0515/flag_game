@@ -1,0 +1,39 @@
+body {
+    font-family: 'NotoSansKR-Regular',Arial, Helvetica, sans-serif;
+    scroll-behavior: smooth;
+    overflow: hidden;
+    color: #222;
+}
+h1 {
+    font-family: 'OpenSansCondensed-Bold';
+    font-size: 72px;
+    line-height: 1.6;
+}
+
+h2 {
+    font-family: 'Roboto-Bold';
+    font-size: 36px;
+    line-height: 1.4;
+}
+
+h3 {
+    font-family: 'Roboto-Bold';
+    font-size: 18px;
+    line-height: 1.2;
+}
+
+h4 {
+    font-family: 'NotoSansKR-Regular';
+    font-size: 20px;
+    line-height: 1;
+}
+
+p {
+    font-family: 'Roboto-Regular';
+    font-size: 14px;
+    line-height: 1.6;
+    white-space: nowrap;
+}
+
+/*text color*/
+
